@@ -3,12 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-欢迎来到冯光大的个人博客,每天进步一点点
+欢迎来到冯光大的个人博客
 =======================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: 目录:
    
    how_to_be_a_rich_man
 
