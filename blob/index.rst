@@ -12,4 +12,4 @@
    
    how_to_be_a_rich_man
    mcu/stm32/stm32_inputmode.rst
-
+   git/git_note.rst
