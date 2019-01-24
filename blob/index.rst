@@ -13,3 +13,4 @@
    
    mcu/stm32/stm32_inputmode.rst
    git/git_note.rst
+   introduction.rst
