@@ -25,3 +25,4 @@ git的工作流
 	
 git的简单命令
 --------------
+- 新建分支 git checkout -b test
