@@ -24,11 +24,47 @@ git的工作流
 	
 git的简单命令
 --------------
+- 提交代码
+	git commit
+-- 
+
+	提交代码的时候可能会误操作了以下几点：
+	1.忘记了提交某个文件
+	2.想把两个commit合并
+	3.commit的信息写错了
+	
+- 忘记了提交某个文件
+	git add test
+	git commit -m "add test"
+	git add a
+	git commit --amend
+- 想把两个commit合并
+	git rebase -i commitid
+- commit的信息写错了
+	git commit --amend
+
+- 撤销文件
+	1.如果是已经git add 文件到了暂存区，那么我们需要git reset HEAD 文件名
+	2.如果还在本地，那么我们可以 git checkout -- 文件名
+	
+--
+	在提交了若干个更新，或者clone了一个新的项目，
+	好奇想看这个项目某个时间段做了什么，想回顾提交的历史，
+	那么就需要查看提交的Log
+	
+- 查看提交历史 git log
+	默认不加参数，git会按照提交时间列出所有的更新，最近更新的会放在最前面
+
+- git log添加选项 --pretty
+	这个选项可以使用不同的默认格式来展示提交历史
+	git log --pretty=oneline	
+.. image:: git_log_pretty_oneline.png		
+	
 -- 
 	如果在工作过程中，想要对某个问题进行追踪，又不想影响到主分支的行为
 	那么可以新建分支并在对应分支上进行修改
 	修改后进行测试，确保修改是正确的，那么可以将其合并到你的master分支来部署在线上
-	
+
 - 新建分支: git checkout -b test
 	相当于git branch test + git checkout test
 
@@ -54,3 +90,4 @@ git的简单命令
 - 释放: git pop
 	将压栈的数据进行弹栈
 .. image:: git_stash_pop.png	
+
