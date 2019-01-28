@@ -14,6 +14,8 @@ git的工作流程
 - 提交修改--->git commit -m ""
 - 修改完成后，发现错误，可以撤回提交并重新修改提交 git 
 
+.. image:: git_work_step.png
+
 git的工作流
 --------------
 -- 
@@ -21,7 +23,8 @@ git的工作流
 	第一个是你的工作目录(workspace)，位于PC上，它持有实际的文件
 	第二个是暂存区（index），它像个缓存区域，临时保存你的改动
 	第三个是HEAD，它指向你最后一次提交的结果
-	
+.. image:: git_basic_knowledge.png
+
 git的简单命令
 --------------
 - 提交代码
@@ -32,22 +35,27 @@ git的简单命令
 	1.忘记了提交某个文件
 	2.想把两个commit合并
 	3.commit的信息写错了
-	
+
 - 忘记了提交某个文件
 	git add test
 	git commit -m "add test"
 	git add a
 	git commit --amend
-.. image:: a.png
-.. image:: a.png
-.. image:: a.png
+
 - 想把两个commit合并
 	git rebase -i commitid
 
+.. image:: git_amend_step1.png
+.. image:: git_commit_amend_step2.png
+.. image:: git_commit_amend_step3.png
+.. image:: git_commit_git_commit_amend_check.png
+
 - commit的信息写错了
 	git commit --amend
-.. image:: a.png
-.. image:: a.png
+.. image:: git_commit_amend_step2
+.. image:: git_commit_amend_step3
+.. image:: git_commit_amend_step
+
 - 撤销文件
 	1.如果是已经git add 文件到了暂存区，那么我们需要git reset HEAD 文件名
 	2.如果还在本地，那么我们可以 git checkout -- 文件名
@@ -96,7 +104,6 @@ git的简单命令
 	将压栈的数据进行弹栈
 .. image:: git_stash_pop.png	
 
-
 -- 
 	在做项目的时候，我们都会有V1.0，V1.1，V1.2诸如此类
 	那么我们发布版本的时候，就可以对当前状态进行打标签
@@ -113,10 +120,10 @@ git的简单命令
 - 在HEAD 新建标签
 	git tag <tagname>
 	git tag -a <tagname> -m "add tag"
-.. image:: a.png
+
 - 对过去的提交打标签
-	git tag -a <tagname> commitid
-.. image:: a.png	
+	git tag -a <tagname> commitid -m "add"
+	
 - 删除标签
 	git tag -d <tagname>
 
@@ -144,3 +151,5 @@ git的简单命令
 - 反转版本
 	使用“git revert -n 反转版本，并使用“git commit -m 版本名”提交
 	
+.. image:: git_revert_step1.png
+.. image:: git_revert_step2.png	
