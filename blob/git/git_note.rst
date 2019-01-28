@@ -27,14 +27,19 @@ git的工作流
 
 git的简单命令
 --------------
-提交代码 git commit
+git commit(提交代码)
 -------------------
 -- 
 
+	步骤：
+		1.git add 文件名
+		2.git commit -m "提交的信息"
+-- 
+
 	提交代码的时候可能会误操作了以下几点：
-	1.忘记了提交某个文件
-	2.想把两个commit合并
-	3.commit的信息写错了
+		1.忘记了提交某个文件
+		2.想把两个commit合并
+		3.commit的信息写错了
 
 - 忘记了提交某个文件
 	git add test
@@ -56,10 +61,14 @@ git的简单命令
 .. image:: git_commit_amend_step3.png
 .. image:: git_commit_amend_check.png
 
-- 撤销文件
-	1.如果是已经git add 文件到了暂存区，那么我们需要git reset HEAD 文件名
-	2.如果还在本地，那么我们可以 git checkout -- 文件名
-	
+git checkout / git reset HEAD (撤销文件)
+-------------------------------------------
+- 如果是已经git add 文件到了暂存区，那么我们需要git reset HEAD 文件名
+- 如果还在本地，那么我们可以 git checkout -- 文件名
+
+git log (查看历史)
+-------------------	
+
 --
 	在提交了若干个更新，或者clone了一个新的项目，
 	好奇想看这个项目某个时间段做了什么，想回顾提交的历史，
@@ -72,7 +81,10 @@ git的简单命令
 	这个选项可以使用不同的默认格式来展示提交历史
 	git log --pretty=oneline	
 .. image:: git_log_pretty_oneline.png		
-	
+
+git checkout 分支名字/git checkout -b 分支名字 （分支管理）	
+-----------------------------------------------------------
+
 -- 
 	如果在工作过程中，想要对某个问题进行追踪，又不想影响到主分支的行为
 	那么可以新建分支并在对应分支上进行修改
@@ -87,6 +99,9 @@ git的简单命令
 - 删除分支: git branch -d
 	git branch -d test
 
+git stash save /git stash pop (储藏和释放数据)
+-----------------------------------------------
+
 --
 	有时候,当你的项目的一部分上已经工作一段时间，看起来所有东西都很混乱。
 	这个时候突然接到一个任务，想要在以前代码的基础上进行功能开发
@@ -100,9 +115,13 @@ git的简单命令
 .. image:: git_stash.png
 .. image:: git_stash_list.png
 .. image:: git_status.png	
+
 - 释放: git pop
 	将压栈的数据进行弹栈
 .. image:: git_stash_pop.png	
+
+git tag (标签)
+---------------
 
 -- 
 	在做项目的时候，我们都会有V1.0，V1.1，V1.2诸如此类
@@ -131,6 +150,10 @@ git的简单命令
 	git tag
 	git show
 	git show <tagname>
+
+git revert (版本回退)
+-----------------------
+
 -
 	
 	当我们已经把我们的commit推送到远程服务器的时候，此时我们想要回退版本,
