@@ -48,10 +48,12 @@ git commit(提交代码)
 - 想把两个commit合并
 	git rebase -i commitid
 
-.. image:: git_amend_step1.png
-.. image:: git_commit_amend_step2.png 
-.. image:: git_commit_amend_step3.png
-.. image:: git_commit_amend_check.png
+.. image:: git_commit_log.png
+.. image:: git_commit_merge_step1.png 
+.. image:: git_commit_merge_step2.png
+.. image:: git_commit_merge_step3.png
+.. image:: git_commit_merge_finish.png
+.. image:: git_commit_merge_check.png
 
 - commit的信息写错了
 	git commit --amend
