@@ -27,8 +27,8 @@ git的工作流
 
 git的简单命令
 --------------
-- 提交代码
-	git commit
+提交代码 git commit
+-------------------
 -- 
 
 	提交代码的时候可能会误操作了以下几点：
@@ -46,15 +46,15 @@ git的简单命令
 	git rebase -i commitid
 
 .. image:: git_amend_step1.png
-.. image:: git_commit_amend_step2.png
+.. image:: git_commit_amend_step2.png 
 .. image:: git_commit_amend_step3.png
-.. image:: git_commit_git_commit_amend_check.png
+.. image:: git_commit_amend_check.png
 
 - commit的信息写错了
 	git commit --amend
-.. image:: git_commit_amend_step2
-.. image:: git_commit_amend_step3
-.. image:: git_commit_amend_step
+.. image:: git_commit_amend_step2.png
+.. image:: git_commit_amend_step3.png
+.. image:: git_commit_amend_check.png
 
 - 撤销文件
 	1.如果是已经git add 文件到了暂存区，那么我们需要git reset HEAD 文件名
