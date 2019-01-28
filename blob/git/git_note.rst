@@ -38,16 +38,11 @@ git的简单命令
 	git commit -m "add test"
 	git add a
 	git commit --amend
-.. image:: a.png
-.. image:: a.png
-.. image:: a.png
 - 想把两个commit合并
 	git rebase -i commitid
-
 - commit的信息写错了
 	git commit --amend
-.. image:: a.png
-.. image:: a.png
+
 - 撤销文件
 	1.如果是已经git add 文件到了暂存区，那么我们需要git reset HEAD 文件名
 	2.如果还在本地，那么我们可以 git checkout -- 文件名
@@ -113,10 +108,10 @@ git的简单命令
 - 在HEAD 新建标签
 	git tag <tagname>
 	git tag -a <tagname> -m "add tag"
-.. image:: a.png
+	
 - 对过去的提交打标签
 	git tag -a <tagname> commitid
-.. image:: a.png	
+	
 - 删除标签
 	git tag -d <tagname>
 
@@ -124,23 +119,3 @@ git的简单命令
 	git tag
 	git show
 	git show <tagname>
--
-	
-	当我们已经把我们的commit推送到远程服务器的时候，此时我们想要回退版本,
-	并且要求这个版本的内容和回退的版本内容一致，但是HEAD指针是指向这个新生
-	成的版本，而不是目标版本。这个时候需要进行revert(反转)一下
-	
-	适用场景：
-		如果想要恢复之前的某一版本，但是又想保留该目标版本后面的版本，并且
-	记录下来整个版本的变动过程。
-	
-	比较：
-		1.git reset  恢复之前某个提交的版本，并且版本之后的所有提交都不要了
-		2.git revert 适用于保留版本变动
-	
-- 查看提交历史
-	git log
-	
-- 反转版本
-	使用“git revert -n 反转版本，并使用“git commit -m 版本名”提交
-	
