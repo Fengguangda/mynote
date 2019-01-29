@@ -13,6 +13,7 @@
    
    introduction.rst
    mcu/mcu_knowledge.rst
+   mcu/about_C_knowledge.rst
    mcu/stm32/stm32_inputmode.rst
    git/git_note.rst
    README.md
